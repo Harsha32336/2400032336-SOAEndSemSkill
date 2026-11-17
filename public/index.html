@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JWT Claims Lab</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header>
+        <p class="eyebrow">Security lab / HS256</p>
+        <h1>JWT Claims Lab</h1>
+        <p class="intro">Verify a token signature, enforce expiration, and inspect the identity it carries.</p>
+      </header>
+      <section class="panel">
+        <div class="toolbar">
+          <span>Load a test token</span>
+          <button data-state="valid">Valid</button>
+          <button data-state="altered">Altered signature</button>
+          <button data-state="expired">Expired</button>
+          <a href="/api-docs" target="_blank" rel="noreferrer">Open Swagger UI</a>
+        </div>
+        <label for="token">JWT token</label>
+        <textarea id="token" rows="7" placeholder="Paste a JWT here or load a test token"></textarea>
+        <button id="validate" class="primary">Validate token</button>
+        <pre id="result" aria-live="polite">Awaiting a token...</pre>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
